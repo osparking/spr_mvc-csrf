@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Student</title>
+</head>
+<body>
+	<h1>Add Student</h1>
+	<form action="#" th:action="@{/saveStudent}" th:object="${student}"
+		method="post">
+		<ul>
+			<li th:errors="*{id}" />
+			<li th:errors="*{name}" />
+			<li th:errors="*{gender}" />
+			<li th:errors="*{percentage}" />
+		</ul>
+		<!-- Remaining part of HTML -->
+	</form>
+</body>
+</html>
